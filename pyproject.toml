@@ -1,0 +1,20 @@
+[project]
+name = "expense-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "OriGranot", email = "pearlog871@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pymupdf>=1.28.0",
+    "ruff>=0.16.1",
+]
+
+[project.scripts]
+expense-ai = "expense_ai:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
