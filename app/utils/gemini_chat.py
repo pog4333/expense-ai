@@ -8,7 +8,7 @@ from google import genai
 from parsers.pdf_extractor import extract_transactions
 
 transactions_text = extract_transactions("/home/origr/ai_engineer_course/expense-ai/sample_data/ Copy.pdf")
-prompt = f"please take this text extracted from bank statement pdf and sort it into a json array of transactions with the following fields: date, description, amount, ending_day_balance. The text is: {transactions_text}"
+prompt = f"Extract the transactions from the provided text. Return one object per transaction. Each transaction must contain:- date, description, amount, ending_day_balance. The text is: {transactions_text}"
 client = genai.Client()
 interaction = client.interactions.create(
     model="gemini-3.1-flash-lite",
