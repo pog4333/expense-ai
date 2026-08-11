@@ -11,3 +11,5 @@ wheels/
 
 #enviroment variables
 .env
+/sample_data
+
